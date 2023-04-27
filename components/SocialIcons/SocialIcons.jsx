@@ -6,11 +6,12 @@ export default function SocialIcons({ Color }) {
   return (
     <div>
       <div
-        className={`text-[${Color.primary}] mt-[268px] w-[200px]  flex justify-around`}
+        className={`mt-[268px] w-[200px]  flex justify-around`}
+        style={{ color: Color.primary }}
       >
-        <LinkedInIcon className="w-10 h-10" />
-        <GitHubIcon className="w-10 h-10" />
-        <FacebookIcon className="w-10 h-10" />
+        <LinkedInIcon style={{ width: "40px", height: "40px" }} />
+        <GitHubIcon style={{ width: "40px", height: "40px" }} />
+        <FacebookIcon style={{ width: "40px", height: "40px" }} />
       </div>
     </div>
   );

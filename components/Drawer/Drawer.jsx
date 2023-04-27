@@ -13,6 +13,7 @@ import ContentPasteIcon from "@mui/icons-material/ContentPaste";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import CallIcon from "@mui/icons-material/Call";
 import CancelIcon from "@mui/icons-material/Cancel";
+import { Margin } from "@mui/icons-material";
 export default function TemporaryDrawer({ ColorHandel, Color }) {
   const [state, setState] = React.useState({
     left: false,
@@ -40,7 +41,15 @@ export default function TemporaryDrawer({ ColorHandel, Color }) {
       <div className="flex justify-end p-4">
         <CancelIcon />
       </div>
-      <List className="border-[4px] m-10 rounded-full border-[#1799F0]">
+      <List
+        style={{
+          border: "4px solid #1799F0",
+          position: "relative",
+          top: "10px",
+          margin: "20px",
+          borderRadius: "100px",
+        }}
+      >
         <ListItem disablePadding>
           <ListItemButton>
             <ListItemIcon>
@@ -50,7 +59,16 @@ export default function TemporaryDrawer({ ColorHandel, Color }) {
           </ListItemButton>
         </ListItem>
       </List>
-      <List className="border-[4px] m-10 rounded-full border-[#1799F0]">
+      <List
+        style={{
+          border: "4px solid #1799F0",
+          position: "relative",
+          top: "10px",
+          margin: "20px",
+
+          borderRadius: "100px",
+        }}
+      >
         <ListItem disablePadding>
           <ListItemButton>
             <ListItemIcon>
@@ -60,7 +78,16 @@ export default function TemporaryDrawer({ ColorHandel, Color }) {
           </ListItemButton>
         </ListItem>
       </List>
-      <List className="border-[4px] m-10 rounded-full border-[#1799F0]">
+      <List
+        style={{
+          border: "4px solid #1799F0",
+          position: "relative",
+          top: "10px",
+          margin: "20px",
+
+          borderRadius: "100px",
+        }}
+      >
         <ListItem disablePadding>
           <ListItemButton>
             <ListItemIcon>
@@ -71,7 +98,14 @@ export default function TemporaryDrawer({ ColorHandel, Color }) {
         </ListItem>
       </List>
       <List
-        className="border-[4px] m-10 rounded-full border-[#1799F0] "
+        style={{
+          border: "4px solid #1799F0",
+          position: "relative",
+          top: "10px",
+          margin: "20px",
+
+          borderRadius: "100px",
+        }}
         onClick={ColorHandel}
       >
         <ListItem disablePadding>
@@ -84,7 +118,16 @@ export default function TemporaryDrawer({ ColorHandel, Color }) {
         </ListItem>
       </List>
 
-      <List className="border-[4px] m-10 rounded-full border-[#1799F0]">
+      <List
+        style={{
+          border: "4px solid #1799F0",
+          position: "relative",
+          top: "10px",
+          margin: "20px",
+
+          borderRadius: "100px",
+        }}
+      >
         <ListItem disablePadding>
           <ListItemButton>
             <ListItemIcon>
