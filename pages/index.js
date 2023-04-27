@@ -9,9 +9,6 @@ export default function Home() {
   const [Color, setColor] = useState(theDarkTheme);
 
   const ColorHandel = () => {
-    // theDarkTheme.type === "dark"
-    //   ? setColor(theDarkTheme)
-    //   : setColor(theLightTheme);
     if (Color === theDarkTheme) {
       setColor(theLightTheme);
     } else if (Color === theLightTheme) {

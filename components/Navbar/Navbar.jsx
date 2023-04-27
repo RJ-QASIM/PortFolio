@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import SocialIcons from "../SocialIcons/SocialIcons";
 import Drawer from "../Drawer/Drawer";
+import { headerData } from "../../data/Nav";
 export default function Navbar({ Color, ColorHandel }) {
   console.log(Color, "bbbbb");
   return (
@@ -47,13 +48,10 @@ export default function Navbar({ Color, ColorHandel }) {
               className={`lg:text-4xl  text-2xl font-semibold`}
               style={{ color: Color.tertiary }}
             >
-              RAJA QASIM ALI
+              {headerData.name}
             </h1>
             <p className="text-[#A4A6B9] mt-5 lg:text-lg text-base font-semibold">
-              Hello! I am Raja Qasim Ali, a professional and passionate
-              programmer in my daily life. A quick learner with a self-learning
-              attitude. I love to learn and explore new technologies and am
-              Passionate about Problem Solving.
+              {headerData.description}
             </p>
             <div className="mt-8 flex justify-center lg:justify-start ">
               <button
