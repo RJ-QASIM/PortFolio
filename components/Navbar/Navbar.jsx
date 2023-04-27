@@ -7,17 +7,21 @@ export default function Navbar({ Color, ColorHandel }) {
   return (
     <>
       <nav className="absolute top-0 h-16 w-full z-50 flex justify-between items-center lg:px-20 px-10">
-        <h1 className={`text-[${Color.primary}]  font-semibold text-4xl`}>
+        <h1
+          className={`font-semibold text-4xl`}
+          style={{ color: Color.primary }}
+        >
           RAJA
         </h1>
 
         <div>
-          <Drawer ColorHandel={ColorHandel} Color={Color} />
+          <Drawer Color={Color} ColorHandel={() => ColorHandel()} />
         </div>
       </nav>
       <div className="grid grid-cols-12">
         <div
-          className={`col-span-full lg:col-span-4 h-[250px] lg:h-full  bg-[${Color.quaternary}] flex justify-center lg:justify-end items-center relative`}
+          className={`col-span-full lg:col-span-4 h-[250px] lg:h-full  flex justify-center lg:justify-end items-center relative`}
+          style={{ background: Color.quaternary }}
         >
           <div className="absolute lg:-right-44">
             <div className="relative  h-[200px] w-[200px] lg:h-[350px] lg:w-[350px] lg:mt-0 mt-60 ">
@@ -25,7 +29,8 @@ export default function Navbar({ Color, ColorHandel }) {
                 src="/images/mm.png"
                 fill
                 sizes="(max-width: 500px) 100px, (max-width: 1023px) 400px, 1000px"
-                className={`rounded-full border-[6px] lg:border-transparent border-[${Color.primary}] object-cover`}
+                className={`rounded-full border-[6px] lg:border-transparent  object-cover`}
+                style={{ border: `4px solid  ${Color.primary}` }}
               />
             </div>
           </div>
@@ -34,7 +39,8 @@ export default function Navbar({ Color, ColorHandel }) {
           </div>
         </div>
         <div
-          className={`col-span-full lg:col-span-8 bg-[${Color.secondary}] lg:min-h-screen flex justify-end lg:items-center items-start  lg:pr-60`}
+          className={`col-span-full lg:col-span-8  lg:min-h-screen flex justify-end lg:items-center items-start  lg:pr-60`}
+          style={{ background: Color.secondary }}
         >
           <div className="lg:max-w-[500px] flex flex-col  lg:text-start text-center w-full  p-10 lg:p-0 lg:mt-0 mt-48 ">
             <h1
