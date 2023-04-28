@@ -3,16 +3,23 @@ import Image from "next/image";
 import SocialIcons from "../SocialIcons/SocialIcons";
 import Drawer from "../Drawer/Drawer";
 import { headerData } from "../../data/Nav";
-export default function Navbar({ Color, ColorHandel }) {
-  console.log(Color, "bbbbb");
+export default function Navbar({ Color, ColorHandel, inter }) {
+  const shortname = (name) => {
+    if (name.length > 12) {
+      return name.split(" ")[0];
+    } else {
+      return name;
+    }
+  };
+
   return (
     <>
       <nav className="absolute top-0 h-16 w-full z-50 flex justify-between items-center lg:px-20 px-10">
         <h1
-          className={`font-semibold text-4xl`}
+          className={`font-semibold text-4xl ${inter.className}`}
           style={{ color: Color.primary }}
         >
-          RAJA
+          {shortname(headerData.name)}
         </h1>
 
         <div>
