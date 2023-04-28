@@ -22,8 +22,8 @@ export default function About({ Color }) {
                   style={{ color: Color.tertiary }}
                   className="mt-[30px] font-semibold lg:text-lg text-base "
                 >
-                  My name is Raja Qasim Ali. I'm a web designer and developer
-                  based in Lahore, Pakistan.
+                  My name is Raja Qasim Ali. I&apos;m a web designer and
+                  developer based in Lahore, Pakistan.
                 </p>
                 <p
                   style={{ color: Color.tertiary }}
