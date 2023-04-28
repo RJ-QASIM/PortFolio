@@ -14,7 +14,11 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 import CallIcon from "@mui/icons-material/Call";
 import CancelIcon from "@mui/icons-material/Cancel";
 import { Margin } from "@mui/icons-material";
-export default function TemporaryDrawer({ ColorHandel, Color }) {
+import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
+import MenuBookIcon from "@mui/icons-material/MenuBook";
+import ConstructionIcon from "@mui/icons-material/Construction";
+
+export default function TemporaryDrawer({ ColorHandel, Color, onClick }) {
   const [state, setState] = React.useState({
     left: false,
   });
@@ -56,6 +60,61 @@ export default function TemporaryDrawer({ ColorHandel, Color }) {
               <HomeIcon className=" text-[#1799F0] " />
             </ListItemIcon>
             Home
+          </ListItemButton>
+        </ListItem>
+      </List>
+      <List
+        style={{
+          border: "4px solid #1799F0",
+          position: "relative",
+          top: "10px",
+          margin: "20px",
+          borderRadius: "100px",
+        }}
+        onClick={onClick}
+      >
+        <ListItem disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              <BusinessCenterIcon className=" text-[#1799F0] " />
+            </ListItemIcon>
+            Experience
+          </ListItemButton>
+        </ListItem>
+      </List>
+      <List
+        style={{
+          border: "4px solid #1799F0",
+          position: "relative",
+          top: "10px",
+          margin: "20px",
+          borderRadius: "100px",
+        }}
+      >
+        <ListItem disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              <MenuBookIcon className=" text-[#1799F0] " />
+            </ListItemIcon>
+            Education
+          </ListItemButton>
+        </ListItem>
+      </List>
+      <List
+        style={{
+          border: "4px solid #1799F0",
+          position: "relative",
+          top: "10px",
+          margin: "20px",
+          borderRadius: "100px",
+        }}
+      >
+        <ListItem disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              <ConstructionIcon className=" text-[#1799F0] " />
+            </ListItemIcon>
+            Skills
           </ListItemButton>
         </ListItem>
       </List>

@@ -1,4 +1,5 @@
 import React from "react";
+import Fade from "react-reveal/Fade";
 
 export default function Footer({ Color }) {
   return (
@@ -43,11 +44,18 @@ export default function Footer({ Color }) {
             <p>Contact Us</p>
 
             <form action="#" method="post">
-              <input type="text" name="name" placeholder="Name" />
-
-              <input type="text" name="email" placeholder="Email" />
-              <textarea name="message" placeholder="Message"></textarea>
-              <button>Send</button>
+              <Fade bottom>
+                <input type="text" name="name" placeholder="Name" />
+              </Fade>
+              <Fade bottom>
+                <input type="text" name="email" placeholder="Email" />
+              </Fade>
+              <Fade bottom>
+                <textarea name="message" placeholder="Message"></textarea>
+              </Fade>
+              <Fade bottom>
+                <button>Send</button>
+              </Fade>
             </form>
           </div>
         </footer>

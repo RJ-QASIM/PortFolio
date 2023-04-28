@@ -3,7 +3,9 @@ import Image from "next/image";
 import SocialIcons from "../SocialIcons/SocialIcons";
 import Drawer from "../Drawer/Drawer";
 import { headerData } from "../../data/Nav";
-export default function Navbar({ Color, ColorHandel, inter }) {
+import Fade from "react-reveal/Fade";
+
+export default function Navbar({ Color, ColorHandel, inter, onClick }) {
   const shortname = (name) => {
     if (name.length > 12) {
       return name.split(" ")[0];
@@ -23,7 +25,11 @@ export default function Navbar({ Color, ColorHandel, inter }) {
         </h1>
 
         <div>
-          <Drawer Color={Color} ColorHandel={() => ColorHandel()} />
+          <Drawer
+            Color={Color}
+            ColorHandel={() => ColorHandel()}
+            onClick={onClick}
+          />
         </div>
       </nav>
       <div className="grid grid-cols-12">
@@ -32,16 +38,19 @@ export default function Navbar({ Color, ColorHandel, inter }) {
           style={{ background: Color.quaternary }}
         >
           <div className="absolute lg:-right-44">
-            <div className="relative  h-[200px] w-[200px] lg:h-[350px] lg:w-[350px] lg:mt-0 mt-60 ">
-              <Image
-                src="/images/mm.png"
-                fill
-                sizes="(max-width: 500px) 100px, (max-width: 1023px) 400px, 1000px"
-                className={`rounded-full border-[6px] lg:border-transparent  object-cover`}
-                style={{ border: `4px solid  ${Color.primary}` }}
-              />
-            </div>
+            <Fade left>
+              <div className="relative  h-[200px] w-[200px] lg:h-[350px] lg:w-[350px] lg:mt-0 mt-60 ">
+                <Image
+                  src="/images/mm.png"
+                  fill
+                  sizes="(max-width: 500px) 100px, (max-width: 1023px) 400px, 1000px"
+                  className={`rounded-full border-[6px] lg:border-transparent  object-cover`}
+                  style={{ border: `4px solid  ${Color.primary}` }}
+                />
+              </div>
+            </Fade>
           </div>
+
           <div className="absolute left-0 bottom-10 lg:block hidden">
             <SocialIcons Color={Color} />
           </div>
@@ -51,37 +60,43 @@ export default function Navbar({ Color, ColorHandel, inter }) {
           style={{ background: Color.secondary }}
         >
           <div className="lg:max-w-[500px] flex flex-col  lg:text-start text-center w-full  p-10 lg:p-0 lg:mt-0 mt-48 ">
-            <h1
-              className={`lg:text-4xl  text-2xl font-semibold`}
-              style={{ color: Color.tertiary }}
-            >
-              {headerData.name}
-            </h1>
-            <p className="text-[#A4A6B9] mt-5 lg:text-lg text-base font-semibold">
-              {headerData.description}
-            </p>
-            <div className="mt-8 flex justify-center lg:justify-start ">
-              <button
-                className="sm:w-[180px] text-[#1D9BF0] 
+            <Fade bottom>
+              <h1
+                className={`lg:text-4xl  text-2xl font-semibold`}
+                style={{ color: Color.tertiary }}
+              >
+                {headerData.name}
+              </h1>
+            </Fade>
+            <Fade bottom>
+              <p className="text-[#A4A6B9] mt-5 lg:text-lg text-base font-semibold">
+                {headerData.description}
+              </p>
+            </Fade>
+            <Fade bottom>
+              <div className="mt-8 flex justify-center lg:justify-start ">
+                <button
+                  className="sm:w-[180px] text-[#1D9BF0] 
                                         rounded-[30px] no-underline	w-36 text-base 
                                         font-medium h-12 border-[3px] border-[#1D9BF0] 
                                         transition duration-100 ease-out 
                                         hover:bg-[#8B98A5] hover:text-[#15202B]
                                          hover:border-[#8B98A5] "
-              >
-                Download CV
-              </button>
-              <button
-                className="sm:w-[180px] bg-[#1D9BF0] ml-2
+                >
+                  Download CV
+                </button>
+                <button
+                  className="sm:w-[180px] bg-[#1D9BF0] ml-2
                                 text-[#15202B] rounded-[30px] no-underline	
                                 w-36 text-base font-medium h-12 border-[3px]
                                  border-[#1D9BF0] transition duration-100 
                                  ease-out hover:bg-[#8B98A5] hover:text-[#15202B]
                                   hover:border-[#8B98A5] hidden sm:block "
-              >
-                Contact
-              </button>
-            </div>
+                >
+                  Contact
+                </button>
+              </div>
+            </Fade>
           </div>
         </div>
       </div>

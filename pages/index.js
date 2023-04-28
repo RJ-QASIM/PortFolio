@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Inter, Dancing_Script } from "@next/font/google";
 import Navbar from "@/components/Navbar/Navbar";
 import Experience from "@/components/Experience/Experience";
@@ -11,6 +11,7 @@ import Footer from "@/components/Footer";
 const inter = Dancing_Script({ subsets: ["latin"] });
 
 export default function Home() {
+  const experienceRef = useRef(null);
   const [Color, setColor] = useState(theDarkTheme);
 
   const ColorHandel = () => {
@@ -21,11 +22,23 @@ export default function Home() {
     }
   };
 
+  const handleScrollToView = () => {
+    alert("hi");
+    experienceRef.current?.scrollIntoView();
+  };
+
   return (
     <>
-      <Navbar ColorHandel={() => ColorHandel()} Color={Color} inter={inter} />
+      <Navbar
+        ColorHandel={() => ColorHandel()}
+        Color={Color}
+        inter={inter}
+        onClick={handleScrollToView}
+      />
       <About Color={Color} />
-      <Experience Color={Color} />
+      <div ref={experienceRef}>
+        <Experience Color={Color} />
+      </div>
       <Skills Color={Color} />
       <Projects Color={Color} />
       <Education Color={Color} />
