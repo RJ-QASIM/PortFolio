@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import { skillsData } from "../data/Skills";
@@ -20,9 +20,9 @@ export default function Skills({ Color }) {
         </h1>
         <div className=" w-full flex justify-around mt-[100px] p-8">
           <Marquee>
-            {skillsData.map((elm) => {
+            {skillsData.map((elm, index) => {
               return (
-                <>
+                <Fragment key={index}>
                   <div className="h-[200px] w-[200px]  flex flex-col justify-center items-center  m-4 shadow-[0_5px_90px_-15px_rgba(0,0,0,0.3)] shadow-indigo-500/40">
                     <Image
                       src={skillsImage(elm)}
@@ -34,7 +34,7 @@ export default function Skills({ Color }) {
                       {elm}
                     </p>
                   </div>
-                </>
+                </Fragment>
               );
             })}
           </Marquee>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import { experienceData } from "@/data/Experience";
 import Fade from "react-reveal/Fade";
@@ -6,9 +6,9 @@ import Fade from "react-reveal/Fade";
 export default function ExperienceCard({ Color }) {
   return (
     <div>
-      {experienceData?.map((elm) => {
+      {experienceData?.map((elm, index) => {
         return (
-          <>
+          <Fragment key={index}>
             <Fade bottom>
               <div className="flex  mt-5 bg-[#1E2732] p-8 lg:w-2/3 w-full  rounded-2xl">
                 <div
@@ -26,7 +26,7 @@ export default function ExperienceCard({ Color }) {
                 </div>
               </div>
             </Fade>
-          </>
+          </Fragment>
         );
       })}
     </div>

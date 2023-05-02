@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { educationData } from "@/data/Education";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import Fade from "react-reveal/Fade";
@@ -6,9 +6,9 @@ import Fade from "react-reveal/Fade";
 export default function EducationCard({ Color }) {
   return (
     <div>
-      {educationData?.map((elm) => {
+      {educationData?.map((elm, index) => {
         return (
-          <>
+          <Fragment key={index}>
             <Fade bottom>
               <div className="flex  mt-5 bg-[#1E2732] p-8 lg:w-2/3 w-full  rounded-2xl">
                 <div
@@ -26,7 +26,7 @@ export default function EducationCard({ Color }) {
                 </div>
               </div>
             </Fade>
-          </>
+          </Fragment>
         );
       })}
     </div>

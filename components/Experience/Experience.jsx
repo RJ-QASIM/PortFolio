@@ -3,6 +3,7 @@ import AnimationLottie from "../Animation";
 import experience from "../../Lottie/development.json";
 import ExperienceCard from "./ExperienceCard";
 import Fade from "react-reveal/Fade";
+
 export default function Experience({ Color }) {
   return (
     <div>

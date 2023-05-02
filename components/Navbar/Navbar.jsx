@@ -50,6 +50,7 @@ export default function Navbar({ Color, ColorHandel, inter, onClick }) {
                   sizes="(max-width: 500px) 100px, (max-width: 1023px) 400px, 1000px"
                   className={`rounded-full border-[6px] lg:border-transparent  object-cover`}
                   style={{ border: `4px solid  ${Color.primary}` }}
+                  alt="portfolio"
                 />
               </div>
             </Fade>
