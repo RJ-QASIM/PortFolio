@@ -2,7 +2,7 @@ import React from "react";
 import AnimationLottie from "../Animation";
 import education from "../../Lottie/education.json";
 import EducationCard from "./EducationCard";
-import Fade from "react-reveal/Fade";
+// import Fade from "react-reveal/Fade";
 
 export default function Education({ Color }) {
   return (
@@ -20,11 +20,11 @@ export default function Education({ Color }) {
           </h1>
 
           <div className="grid lg:grid-cols-2 sm:grid-cols-1 mb-5 mt-[60px]">
-            <Fade left>
-              <div className=" flex justify-center items-center p-8">
-                <AnimationLottie animationPath={education} width={"50%"} />
-              </div>
-            </Fade>
+            {/* </Fade> */}
+            <div className=" flex justify-center items-center p-8">
+              <AnimationLottie animationPath={education} width={"50%"} />
+            </div>
+            {/* </Fade> */}
             <div className="p-4">
               <EducationCard Color={Color} />
             </div>

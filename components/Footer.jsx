@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import Fade from "react-reveal/Fade";
+// import Fade from "react-reveal/Fade";
 import SocialIcons from "./SocialIcons/SocialIcons";
 export default function Footer({ Color }) {
   const form = useRef();
@@ -50,18 +50,18 @@ export default function Footer({ Color }) {
             <p>Contact Us</p>
 
             <form action="#" method="post" ref={form} onSubmit={sendEmail}>
-              <Fade bottom>
-                <input type="text" name="user_name" placeholder="Name" />
-              </Fade>
-              <Fade bottom>
-                <input type="text" name="user_email" placeholder="Email" />
-              </Fade>
-              <Fade bottom>
-                <textarea name="message" placeholder="Message"></textarea>
-              </Fade>
-              <Fade bottom>
-                <button>Send</button>
-              </Fade>
+              {/* </Fade> */}
+              <input type="text" name="user_name" placeholder="Name" />
+              {/* </Fade> */}
+              {/* </Fade> */}
+              <input type="text" name="user_email" placeholder="Email" />
+              {/* </Fade> */}
+              {/* </Fade> */}
+              <textarea name="message" placeholder="Message"></textarea>
+              {/* </Fade> */}
+              {/* </Fade> */}
+              <button>Send</button>
+              {/* </Fade> */}
             </form>
           </div>
         </footer>
