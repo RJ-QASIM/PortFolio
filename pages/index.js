@@ -11,7 +11,6 @@ import Footer from "@/components/Footer";
 const inter = Dancing_Script({ subsets: ["latin"] });
 
 export default function Home() {
-  const experienceRef = useRef(null);
   const [Color, setColor] = useState(theDarkTheme);
 
   const ColorHandel = () => {
@@ -22,23 +21,11 @@ export default function Home() {
     }
   };
 
-  const handleScrollToView = () => {
-    alert("hi");
-    experienceRef.current?.scrollIntoView();
-  };
-
   return (
     <>
-      <Navbar
-        ColorHandel={() => ColorHandel()}
-        Color={Color}
-        inter={inter}
-        onClick={handleScrollToView}
-      />
+      <Navbar ColorHandel={() => ColorHandel()} Color={Color} inter={inter} />
       <About Color={Color} />
-      <div ref={experienceRef}>
-        <Experience Color={Color} />
-      </div>
+      <Experience Color={Color} />
       <Skills Color={Color} />
       <Projects Color={Color} />
       <Education Color={Color} />

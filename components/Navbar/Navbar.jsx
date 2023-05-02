@@ -4,6 +4,7 @@ import SocialIcons from "../SocialIcons/SocialIcons";
 import Drawer from "../Drawer/Drawer";
 import { headerData } from "../../data/Nav";
 import Fade from "react-reveal/Fade";
+import { Link } from "react-scroll";
 
 export default function Navbar({ Color, ColorHandel, inter, onClick }) {
   const shortname = (name) => {
@@ -16,7 +17,10 @@ export default function Navbar({ Color, ColorHandel, inter, onClick }) {
 
   return (
     <>
-      <nav className="absolute top-0 h-16 w-full z-50 flex justify-between items-center lg:px-20 px-10">
+      <nav
+        className="absolute top-0 h-16 w-full z-50 flex justify-between items-center lg:px-20 px-10"
+        id="#Home"
+      >
         <h1
           className={`font-semibold text-4xl ${inter.className}`}
           style={{ color: Color.primary }}
@@ -52,7 +56,7 @@ export default function Navbar({ Color, ColorHandel, inter, onClick }) {
           </div>
 
           <div className="absolute left-0 bottom-10 lg:block hidden">
-            <SocialIcons Color={Color} />
+            <SocialIcons Color={Color} top="268px" />
           </div>
         </div>
         <div
@@ -93,7 +97,15 @@ export default function Navbar({ Color, ColorHandel, inter, onClick }) {
                                  ease-out hover:bg-[#8B98A5] hover:text-[#15202B]
                                   hover:border-[#8B98A5] hidden sm:block "
                 >
-                  Contact
+                  <Link
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                    to="#Contact"
+                  >
+                    Contact
+                  </Link>
                 </button>
               </div>
             </Fade>

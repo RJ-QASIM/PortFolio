@@ -6,7 +6,7 @@ import Fade from "react-reveal/Fade";
 
 export default function Education({ Color }) {
   return (
-    <div>
+    <div id="#Education">
       <div
         className="flex justify-center"
         style={{ background: Color.secondary }}

@@ -3,11 +3,11 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { socialsData } from "@/data/SocialData";
-export default function SocialIcons({ Color }) {
+export default function SocialIcons({ Color, top }) {
   return (
     <div>
       <div
-        className={`mt-[268px] w-[200px]  flex justify-around`}
+        className={`mt-[${top}] w-[200px]  flex justify-around`}
         style={{ color: Color.primary }}
       >
         <a href={socialsData.linkedIn} target="_blank">

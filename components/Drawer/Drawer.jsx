@@ -17,7 +17,7 @@ import { Margin } from "@mui/icons-material";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import ConstructionIcon from "@mui/icons-material/Construction";
-
+import { Link } from "react-scroll";
 export default function TemporaryDrawer({ ColorHandel, Color, onClick }) {
   const [state, setState] = React.useState({
     left: false,
@@ -45,117 +45,136 @@ export default function TemporaryDrawer({ ColorHandel, Color, onClick }) {
       <div className="flex justify-end p-4">
         <CancelIcon />
       </div>
-      <List
-        style={{
-          border: "4px solid #1799F0",
-          position: "relative",
-          top: "10px",
-          margin: "20px",
-          borderRadius: "100px",
-        }}
+      <Link spy={true} smooth={true} offset={50} duration={500} to="#Home">
+        <List
+          style={{
+            border: "4px solid #1799F0",
+            position: "relative",
+            top: "10px",
+            margin: "20px",
+            borderRadius: "100px",
+          }}
+        >
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <HomeIcon className=" text-[#1799F0] " />
+              </ListItemIcon>
+              Home
+            </ListItemButton>
+          </ListItem>
+        </List>
+      </Link>
+      <Link
+        spy={true}
+        smooth={true}
+        offset={50}
+        duration={500}
+        to="#Experience"
       >
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              <HomeIcon className=" text-[#1799F0] " />
-            </ListItemIcon>
-            Home
-          </ListItemButton>
-        </ListItem>
-      </List>
-      <List
-        style={{
-          border: "4px solid #1799F0",
-          position: "relative",
-          top: "10px",
-          margin: "20px",
-          borderRadius: "100px",
-        }}
-        onClick={onClick}
-      >
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              <BusinessCenterIcon className=" text-[#1799F0] " />
-            </ListItemIcon>
-            Experience
-          </ListItemButton>
-        </ListItem>
-      </List>
-      <List
-        style={{
-          border: "4px solid #1799F0",
-          position: "relative",
-          top: "10px",
-          margin: "20px",
-          borderRadius: "100px",
-        }}
-      >
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              <MenuBookIcon className=" text-[#1799F0] " />
-            </ListItemIcon>
-            Education
-          </ListItemButton>
-        </ListItem>
-      </List>
-      <List
-        style={{
-          border: "4px solid #1799F0",
-          position: "relative",
-          top: "10px",
-          margin: "20px",
-          borderRadius: "100px",
-        }}
-      >
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              <ConstructionIcon className=" text-[#1799F0] " />
-            </ListItemIcon>
-            Skills
-          </ListItemButton>
-        </ListItem>
-      </List>
-      <List
-        style={{
-          border: "4px solid #1799F0",
-          position: "relative",
-          top: "10px",
-          margin: "20px",
+        <List
+          style={{
+            border: "4px solid #1799F0",
+            position: "relative",
+            top: "10px",
+            margin: "20px",
+            borderRadius: "100px",
+          }}
+          onClick={onClick}
+        >
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <BusinessCenterIcon className=" text-[#1799F0] " />
+              </ListItemIcon>
+              Experience
+            </ListItemButton>
+          </ListItem>
+        </List>
+      </Link>
+      <Link spy={true} smooth={true} offset={50} duration={500} to="#Education">
+        <List
+          style={{
+            border: "4px solid #1799F0",
+            position: "relative",
+            top: "10px",
+            margin: "20px",
+            borderRadius: "100px",
+          }}
+        >
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <MenuBookIcon className=" text-[#1799F0] " />
+              </ListItemIcon>
+              Education
+            </ListItemButton>
+          </ListItem>
+        </List>
+      </Link>
+      <Link spy={true} smooth={true} offset={50} duration={500} to="#Skills">
+        <List
+          style={{
+            border: "4px solid #1799F0",
+            position: "relative",
+            top: "10px",
+            margin: "20px",
+            borderRadius: "100px",
+          }}
+        >
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <ConstructionIcon className=" text-[#1799F0] " />
+              </ListItemIcon>
+              Skills
+            </ListItemButton>
+          </ListItem>
+        </List>
+      </Link>
+      <Link spy={true} smooth={true} offset={50} duration={500} to="#About">
+        <List
+          style={{
+            border: "4px solid #1799F0",
+            position: "relative",
+            top: "10px",
+            margin: "20px",
 
-          borderRadius: "100px",
-        }}
-      >
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              <PersonIcon className=" text-[#1799F0] " />
-            </ListItemIcon>
-            About
-          </ListItemButton>
-        </ListItem>
-      </List>
-      <List
-        style={{
-          border: "4px solid #1799F0",
-          position: "relative",
-          top: "10px",
-          margin: "20px",
+            borderRadius: "100px",
+          }}
+        >
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <PersonIcon className=" text-[#1799F0] " />
+              </ListItemIcon>
+              About
+            </ListItemButton>
+          </ListItem>
+        </List>
+      </Link>
+      <Link spy={true} smooth={true} offset={50} duration={500} to="#Resume">
+        <List
+          style={{
+            border: "4px solid #1799F0",
+            position: "relative",
+            top: "10px",
+            margin: "20px",
 
-          borderRadius: "100px",
-        }}
-      >
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              <ContentPasteIcon className=" text-[#1799F0] " />
-            </ListItemIcon>
-            Resume
-          </ListItemButton>
-        </ListItem>
-      </List>
+            borderRadius: "100px",
+          }}
+        >
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <ContentPasteIcon className=" text-[#1799F0] " />
+              </ListItemIcon>
+              Resume
+            </ListItemButton>
+          </ListItem>
+        </List>
+      </Link>
+
       <List
         style={{
           border: "4px solid #1799F0",
@@ -176,26 +195,27 @@ export default function TemporaryDrawer({ ColorHandel, Color, onClick }) {
           </ListItemButton>
         </ListItem>
       </List>
+      <Link spy={true} smooth={true} offset={50} duration={500} to="#Contact">
+        <List
+          style={{
+            border: "4px solid #1799F0",
+            position: "relative",
+            top: "10px",
+            margin: "20px",
 
-      <List
-        style={{
-          border: "4px solid #1799F0",
-          position: "relative",
-          top: "10px",
-          margin: "20px",
-
-          borderRadius: "100px",
-        }}
-      >
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              <CallIcon className=" text-[#1799F0] " />
-            </ListItemIcon>
-            Contact
-          </ListItemButton>
-        </ListItem>
-      </List>
+            borderRadius: "100px",
+          }}
+        >
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <CallIcon className=" text-[#1799F0] " />
+              </ListItemIcon>
+              Contact
+            </ListItemButton>
+          </ListItem>
+        </List>
+      </Link>
     </Box>
   );
 

@@ -7,7 +7,11 @@ import { skillsImage } from "@/utility/skills-image";
 export default function Skills({ Color }) {
   return (
     <div>
-      <div className="mt-[60px]" style={{ background: Color.secondary }}>
+      <div
+        id="#Skills"
+        className="mt-[60px]"
+        style={{ background: Color.secondary }}
+      >
         <h1
           className="text-center font-medium text-4xl   "
           style={{ color: Color.primary }}
